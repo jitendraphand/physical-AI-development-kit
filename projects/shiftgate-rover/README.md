@@ -8,11 +8,12 @@ The task is small.  The problem is not “solve a maze”.  It is:
 
 **Target hardware cost (India, November 2026): ≈ ₹2,400–2,700**, comfortably under ₹3,500.  See [BOM.md](BOM.md).
 
-> **About the video.**  [`media/shiftgate_sim.mp4`](media/shiftgate_sim.mp4) is a **PyBullet TinyRenderer simulation render**, not a camera recording of a physical robot.  An optional Blender turntable of the printed parts is also a render.  Neither is real-world footage.
+> **About the video.**  [`media/shiftgate_sim.mp4`](media/shiftgate_sim.mp4) is a **PyBullet TinyRenderer simulation render**, not a camera recording of a physical robot.  [`media/shiftgate_cad_render.mp4`](media/shiftgate_cad_render.mp4) is a **Blender CAD render** of the assembled printed parts sitting in the stock maze.  Neither is real-world footage.
 
 [![ShiftGate simulation render (poster)](media/shiftgate_sim_poster.png)](media/shiftgate_sim.mp4)
+[![ShiftGate CAD render (poster)](media/shiftgate_cad_render_poster.png)](media/shiftgate_cad_render.mp4)
 
-[Download the 25 s simulation render (MP4)](media/shiftgate_sim.mp4) · [Arena overview still](media/shiftgate_arena_overview.png)
+[Download the 25 s simulation render (MP4)](media/shiftgate_sim.mp4) · [CAD render of the assembled rover in the maze (8 s)](media/shiftgate_cad_render.mp4) · [Arena overview still](media/shiftgate_arena_overview.png)
 
 ## The arena, in one picture
 
@@ -96,7 +97,7 @@ projects/shiftgate-rover/
     shiftgate_core/         pure-Python map / plan / replan
     pybullet/               simulator + video renderer
     ros2_ws/                description, gazebo, bringup, nav
-  media/                    simulation renders
+  media/                    simulation and CAD renders
 ```
 
 ## Hardware in one paragraph
@@ -116,6 +117,7 @@ An ESP32-WROOM DevKit, two N20 6 V motors **with encoders**, a DRV8833 driver, o
 |---|---|
 | `shiftgate_core` unit tests | Run when this project was added (19 passed).  A GitHub Actions workflow is provided at `ci/shiftgate-tests.yml` — copy it to `.github/workflows/` to enable it. |
 | PyBullet mission + MP4 render | Run; video is a simulation render |
+| Blender CAD render of the assembled rover in the maze | Run; video is a CAD render (EEVEE, 1280×720, 8 s), not real footage |
 | STL watertight check (trimesh) | Run; all 13 parts watertight |
 | CadQuery export of STL/STEP | Run |
 | FreeCAD headless export | Script provided; FreeCAD was not available on the authoring machine (apt unsigned, conda package not installed).  Use CadQuery, or run the FreeCAD script in your lab. |
