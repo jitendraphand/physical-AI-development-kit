@@ -1,0 +1,80 @@
+[
+  {
+    "name": "chassis_base",
+    "stl": "chassis_base.stl",
+    "step": "chassis_base.step",
+    "qty": 1
+  },
+  {
+    "name": "motor_clamp",
+    "stl": "motor_clamp.stl",
+    "step": "motor_clamp.step",
+    "qty": 2
+  },
+  {
+    "name": "wheel",
+    "stl": "wheel.stl",
+    "step": "wheel.step",
+    "qty": 2
+  },
+  {
+    "name": "caster_cup",
+    "stl": "caster_cup.stl",
+    "step": "caster_cup.step",
+    "qty": 1
+  },
+  {
+    "name": "sensor_bracket_us",
+    "stl": "sensor_bracket_us.stl",
+    "step": "sensor_bracket_us.step",
+    "qty": 1
+  },
+  {
+    "name": "sensor_bracket_ir",
+    "stl": "sensor_bracket_ir.stl",
+    "step": "sensor_bracket_ir.step",
+    "qty": 2
+  },
+  {
+    "name": "electronics_cover",
+    "stl": "electronics_cover.stl",
+    "step": "electronics_cover.step",
+    "qty": 1
+  },
+  {
+    "name": "battery_retainer",
+    "stl": "battery_retainer.stl",
+    "step": "battery_retainer.step",
+    "qty": 1
+  },
+  {
+    "name": "wall_clip",
+    "stl": "wall_clip.stl",
+    "step": "wall_clip.step",
+    "qty": 24
+  },
+  {
+    "name": "wall_post",
+    "stl": "wall_post.stl",
+    "step": "wall_post.step",
+    "qty": 12
+  },
+  {
+    "name": "wall_segment",
+    "stl": "wall_segment.stl",
+    "step": "wall_segment.step",
+    "qty": 0
+  },
+  {
+    "name": "gate_segment",
+    "stl": "gate_segment.stl",
+    "step": "gate_segment.step",
+    "qty": 1
+  },
+  {
+    "name": "alignment_jig",
+    "stl": "alignment_jig.stl",
+    "step": "alignment_jig.step",
+    "qty": 1
+  }
+]

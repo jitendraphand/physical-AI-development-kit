@@ -1,0 +1,31 @@
+name: ShiftGate tests
+
+on:
+  push:
+    paths:
+      - "projects/shiftgate-rover/**"
+      - ".github/workflows/shiftgate-tests.yml"
+  pull_request:
+    paths:
+      - "projects/shiftgate-rover/**"
+      - ".github/workflows/shiftgate-tests.yml"
+
+jobs:
+  core-and-stls:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r projects/shiftgate-rover/requirements.txt
+      - name: Unit tests
+        run: pytest -q
+        working-directory: projects/shiftgate-rover/software/shiftgate_core
+      - name: Mission check
+        run: python software/pybullet/simulate.py --check
+        working-directory: projects/shiftgate-rover
+      - name: STL watertight
+        run: python cad/verify_stls.py
+        working-directory: projects/shiftgate-rover

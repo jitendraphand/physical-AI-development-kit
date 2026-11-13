@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="shiftgate_rover">
+  <xacro:property name="wheel_radius" value="0.024"/>
+  <xacro:property name="wheel_width" value="0.008"/>
+  <xacro:property name="track" value="0.102"/>
+  <xacro:property name="chassis_l" value="0.118"/>
+  <xacro:property name="chassis_w" value="0.090"/>
+  <xacro:property name="chassis_h" value="0.022"/>
+  <xacro:property name="axle_z" value="0.024"/>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${axle_z}" rpy="0 0 0"/>
+      <geometry><box size="${chassis_l} ${chassis_w} ${chassis_h}"/></geometry>
+      <material name="teal"><color rgba="0.12 0.35 0.48 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${axle_z}" rpy="0 0 0"/>
+      <geometry><box size="${chassis_l} ${chassis_w} ${chassis_h}"/></geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 ${axle_z}" rpy="0 0 0"/>
+      <mass value="0.40"/>
+      <inertia ixx="0.001" iyy="0.0015" izz="0.0015" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <xacro:macro name="wheel" params="name y_off">
+    <link name="${name}">
+      <visual>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_width}"/></geometry>
+        <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_width}"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="0.03"/>
+        <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin xyz="-0.031 ${y_off} ${axle_z}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:wheel name="wheel_left" y_off="${track/2}"/>
+  <xacro:wheel name="wheel_right" y_off="${-track/2}"/>
+
+  <link name="ultrasonic_link">
+    <visual>
+      <geometry><cylinder radius="0.008" length="0.012"/></geometry>
+      <material name="cream"><color rgba="0.9 0.9 0.85 1"/></material>
+    </visual>
+  </link>
+  <joint name="ultrasonic_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultrasonic_link"/>
+    <origin xyz="${chassis_l/2 + 0.004} 0 ${axle_z + 0.004}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Gazebo plugins are added by the gazebo xacro when included from the sim launch. -->
+</robot>

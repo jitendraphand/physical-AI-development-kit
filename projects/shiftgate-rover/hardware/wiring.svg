@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420" font-family="DejaVu Sans, Arial, sans-serif" font-size="13">
+  <rect width="860" height="420" fill="#f7f4ee"/>
+  <text x="24" y="28" font-size="18" font-weight="700" fill="#1e2a32">ShiftGate Rover — wiring (schematic, not a PCB)</text>
+  <rect x="24" y="50" width="180" height="90" rx="8" fill="#fff" stroke="#1e2a32"/>
+  <text x="40" y="78">4×AA ≈ 6 V</text>
+  <text x="40" y="98">via SPST switch</text>
+  <text x="40" y="118">to DRV8833 VM</text>
+  <rect x="230" y="50" width="180" height="90" rx="8" fill="#fff" stroke="#1e2a32"/>
+  <text x="246" y="78">USB 5 V</text>
+  <text x="246" y="98">power bank / cable</text>
+  <text x="246" y="118">to ESP32 USB</text>
+  <rect x="436" y="50" width="400" height="90" rx="8" fill="#e8f2f4" stroke="#1e2a32"/>
+  <text x="452" y="78" font-weight="700">Common GND is mandatory</text>
+  <text x="452" y="98">AA pack GND, DRV8833 GND, ESP32 GND,</text>
+  <text x="452" y="118">and every sensor GND meet at one point.</text>
+  <rect x="24" y="170" width="250" height="210" rx="8" fill="#fff" stroke="#1e2a32"/>
+  <text x="40" y="196" font-weight="700">ESP32 DevKit V1</text>
+  <text x="40" y="222">26/27 → left motor</text>
+  <text x="40" y="242">32/33 → right motor</text>
+  <text x="40" y="262">25 → nSLEEP</text>
+  <text x="40" y="282">16/17, 18/19 → encoders</text>
+  <text x="40" y="302">23 / 4 → US TRIG / ECHO*</text>
+  <text x="40" y="322">34 / 35 → IR L / R</text>
+  <text x="40" y="342">21 / 22 → optional IMU</text>
+  <text x="40" y="362" font-size="11">*ECHO through 1 kΩ / 2 kΩ divider</text>
+  <rect x="300" y="170" width="250" height="210" rx="8" fill="#fff" stroke="#1e2a32"/>
+  <text x="316" y="196" font-weight="700">DRV8833 + N20s</text>
+  <text x="316" y="222">VM = 6 V from AA pack</text>
+  <text x="316" y="242">AIN1/2 ← GPIO 26/27</text>
+  <text x="316" y="262">BIN1/2 ← GPIO 32/33</text>
+  <text x="316" y="282">AOUT → left motor</text>
+  <text x="316" y="302">BOUT → right motor</text>
+  <text x="316" y="322">Do not use an L298N</text>
+  <text x="316" y="342" font-size="11">at 6 V it wastes half the pack.</text>
+  <rect x="576" y="170" width="260" height="210" rx="8" fill="#fff" stroke="#1e2a32"/>
+  <text x="592" y="196" font-weight="700">Sensors</text>
+  <text x="592" y="222">HC-SR04 VCC = 5 V</text>
+  <text x="592" y="242">IR VCC = 3.3 or 5 V</text>
+  <text x="592" y="262">Encoder VCC = 3.3 V</text>
+  <text x="592" y="282">IR OUT is usually LOW</text>
+  <text x="592" y="302">when an obstacle is seen.</text>
+  <text x="592" y="332" font-size="11">Full pin table: wiring.md</text>
+</svg>

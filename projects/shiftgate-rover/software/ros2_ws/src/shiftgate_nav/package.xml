@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>shiftgate_nav</name>
+  <version>1.0.0</version>
+  <description>ROS 2 nodes wrapping shiftgate_core (explore, plan, replan).</description>
+  <maintainer email="jitendra@example.com">Jitendra Phand</maintainer>
+  <license>MIT</license>
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <exec_depend>shiftgate_description</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>
