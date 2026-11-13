@@ -1,0 +1,171 @@
+[
+  {
+    "name": "alignment_jig",
+    "watertight": true,
+    "volume_cm3": 12.781,
+    "grams_pla_solid": 15.85,
+    "qty": 1,
+    "extents_mm": [
+      30.0,
+      16.0,
+      30.0
+    ],
+    "faces": 348
+  },
+  {
+    "name": "battery_retainer",
+    "watertight": true,
+    "volume_cm3": 2.184,
+    "grams_pla_solid": 2.71,
+    "qty": 1,
+    "extents_mm": [
+      69.0,
+      8.0,
+      14.0
+    ],
+    "faces": 44
+  },
+  {
+    "name": "caster_cup",
+    "watertight": true,
+    "volume_cm3": 0.804,
+    "grams_pla_solid": 1.0,
+    "qty": 1,
+    "extents_mm": [
+      11.6,
+      11.6,
+      13.1
+    ],
+    "faces": 4106
+  },
+  {
+    "name": "chassis_base",
+    "watertight": true,
+    "volume_cm3": 49.331,
+    "grams_pla_solid": 61.17,
+    "qty": 1,
+    "extents_mm": [
+      118.0,
+      93.0,
+      22.0
+    ],
+    "faces": 9874
+  },
+  {
+    "name": "electronics_cover",
+    "watertight": true,
+    "volume_cm3": 12.69,
+    "grams_pla_solid": 15.74,
+    "qty": 1,
+    "extents_mm": [
+      70.0,
+      50.0,
+      18.0
+    ],
+    "faces": 2080
+  },
+  {
+    "name": "gate_segment",
+    "watertight": true,
+    "volume_cm3": 37.116,
+    "grams_pla_solid": 46.02,
+    "qty": 1,
+    "extents_mm": [
+      176.0,
+      6.0,
+      74.0
+    ],
+    "faces": 60
+  },
+  {
+    "name": "motor_clamp",
+    "watertight": true,
+    "volume_cm3": 0.324,
+    "grams_pla_solid": 0.4,
+    "qty": 2,
+    "extents_mm": [
+      22.0,
+      8.0,
+      3.0
+    ],
+    "faces": 1044
+  },
+  {
+    "name": "sensor_bracket_ir",
+    "watertight": true,
+    "volume_cm3": 1.205,
+    "grams_pla_solid": 1.49,
+    "qty": 2,
+    "extents_mm": [
+      18.5,
+      16.0,
+      16.0
+    ],
+    "faces": 584
+  },
+  {
+    "name": "sensor_bracket_us",
+    "watertight": true,
+    "volume_cm3": 2.306,
+    "grams_pla_solid": 2.86,
+    "qty": 1,
+    "extents_mm": [
+      59.5,
+      32.0,
+      3.0
+    ],
+    "faces": 2112
+  },
+  {
+    "name": "wall_clip",
+    "watertight": true,
+    "volume_cm3": 2.808,
+    "grams_pla_solid": 3.48,
+    "qty": 24,
+    "extents_mm": [
+      18.0,
+      19.3,
+      18.0
+    ],
+    "faces": 76
+  },
+  {
+    "name": "wall_post",
+    "watertight": true,
+    "volume_cm3": 4.568,
+    "grams_pla_solid": 5.66,
+    "qty": 12,
+    "extents_mm": [
+      14.0,
+      14.0,
+      54.0
+    ],
+    "faces": 60
+  },
+  {
+    "name": "wall_segment",
+    "watertight": true,
+    "volume_cm3": 35.2,
+    "grams_pla_solid": 43.65,
+    "qty": 0,
+    "extents_mm": [
+      176.0,
+      4.0,
+      50.0
+    ],
+    "faces": 12
+  },
+  {
+    "name": "wheel",
+    "watertight": true,
+    "volume_cm3": 10.633,
+    "grams_pla_solid": 13.18,
+    "qty": 2,
+    "extents_mm": [
+      48.0,
+      48.0,
+      10.0
+    ],
+    "faces": 5140
+  }
+]
