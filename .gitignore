@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# ROS 2
+install/
+log/
+build/
+COLCON_IGNORE
+
+# Firmware / PlatformIO
+firmware/**/.pio/
+firmware/**/.vscode/
+
+# CAD / OS
+*.FCStd1
+*.FCBak
+.DS_Store
+Thumbs.db
+
+# Large local toolchains (never commit)
+*.AppImage
+blender-*/
+cad-pixi/
+
+# Video intermediates
+media/_frames/
+*.blend1
