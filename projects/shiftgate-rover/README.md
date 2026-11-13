@@ -114,7 +114,7 @@ An ESP32-WROOM DevKit, two N20 6 V motors **with encoders**, a DRV8833 driver, o
 
 | Thing | Status |
 |---|---|
-| `shiftgate_core` unit tests | Run in CI and when this project was added (19 passed) |
+| `shiftgate_core` unit tests | Run when this project was added (19 passed).  A GitHub Actions workflow is provided at `ci/shiftgate-tests.yml` — copy it to `.github/workflows/` to enable it. |
 | PyBullet mission + MP4 render | Run; video is a simulation render |
 | STL watertight check (trimesh) | Run; all 13 parts watertight |
 | CadQuery export of STL/STEP | Run |
